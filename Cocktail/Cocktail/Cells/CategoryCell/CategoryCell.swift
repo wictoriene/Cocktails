@@ -5,21 +5,29 @@
 //  Created by wictoriene on 19.03.22.
 //
 
+protocol UpdateChooseCategory {
+    func choosenCategory(tag:Int)
+}
+
 import UIKit
+import Moya
 
 class CategoryCell: UICollectionViewCell {
     
-    let categoryButton = UIButton()
+    var categoryButton = UIButton()
+    
     weak var image: UIImage!
     var title: String!
+    var choosenCategoryCellDelegate: UpdateChooseCategory?
     
     @IBOutlet weak var view: UIView!
     static let identifier = "kCategoryCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //configureButton()
-        
+        view.layer.cornerRadius = 10
+        view.contentMode = .scaleAspectFit
+
     }
     
     func update(for categoryModel: CategoryModel) {
@@ -31,17 +39,21 @@ class CategoryCell: UICollectionViewCell {
         categoryButton.configuration = .filled()
         categoryButton.configuration?.cornerStyle = .small
         categoryButton.configuration?.baseForegroundColor = .tertiarySystemGroupedBackground
-        categoryButton.configuration?.imagePlacement = .top
-        categoryButton.configuration?.imagePadding = 20.0
+        categoryButton.configuration?.imagePlacement = .leading
+        categoryButton.configuration?.imagePadding = 10.0
         categoryButton.configuration?.image = image
         categoryButton.configuration?.title = title
+        categoryButton.addTarget(self, action: #selector(chooseButtonAction), for:.touchUpInside)
         addButtonConstrains()
-        
+
     }
     
     func addButtonConstrains(){
+//        view.contentMode = .scaleAspectFill
         view.addSubview(categoryButton)
-        categoryButton.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        categoryButton.layer.cornerRadius = 10
+        
         
         NSLayoutConstraint.activate([
             categoryButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -50,6 +62,11 @@ class CategoryCell: UICollectionViewCell {
             categoryButton.heightAnchor.constraint(equalToConstant: 250)
         ])
     }
+    
+    @objc func chooseButtonAction(sender: UIButton){
+        choosenCategoryCellDelegate?.choosenCategory(tag: tag)
+    }
+
 
 }
 

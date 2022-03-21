@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CocktailInfoVC" customModule="Cocktail" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" id="buh-l6-BDF">
+                    <rect key="frame" x="0.0" y="-128" width="414" height="990"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeK-Us-kbD">
+                    <rect key="frame" x="166" y="60" width="92" height="26"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="ChalkboardSE-Light"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="60K-1i-vD2">
+                    <rect key="frame" x="87" y="155" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="XFC-qb-jFr"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4yz-zl-yFv">
+                    <rect key="frame" x="20" y="421" width="374" height="351"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="351" id="xXA-fx-CFw"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="46G-oC-Vx5">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVo-FY-dWV">
+                    <rect key="frame" x="20" y="793" width="374" height="39.5"/>
+                    <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Приготовить">
+                                <attributes>
+                                    <font key="NSFont" size="18" name="ChalkboardSE-Light"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="4yz-zl-yFv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="49a-LF-Ncz"/>
+                <constraint firstItem="4yz-zl-yFv" firstAttribute="top" secondItem="60K-1i-vD2" secondAttribute="bottom" constant="26" id="8rJ-WR-qnv"/>
+                <constraint firstItem="JeK-Us-kbD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="8vZ-7R-sA9"/>
+                <constraint firstItem="JeK-Us-kbD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="166" id="A0Y-MI-o2h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JeK-Us-kbD" secondAttribute="trailing" constant="156" id="Fih-a3-uIV"/>
+                <constraint firstItem="sVo-FY-dWV" firstAttribute="top" secondItem="4yz-zl-yFv" secondAttribute="bottom" constant="21" id="JGj-fW-OdM"/>
+                <constraint firstItem="60K-1i-vD2" firstAttribute="top" secondItem="JeK-Us-kbD" secondAttribute="bottom" constant="69" id="LJM-od-beI"/>
+                <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="buh-l6-BDF" secondAttribute="centerX" id="Uee-HZ-Ddb"/>
+                <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="4yz-zl-yFv" secondAttribute="centerX" id="ZyR-nP-yWR"/>
+                <constraint firstItem="4yz-zl-yFv" firstAttribute="leading" secondItem="sVo-FY-dWV" secondAttribute="leading" id="iOt-yZ-7gK"/>
+                <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="sVo-FY-dWV" secondAttribute="centerX" id="m2p-FC-SAw"/>
+                <constraint firstItem="60K-1i-vD2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="pdF-eE-XUR"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="62.946428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="360" height="640"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
