@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CocktailsCell" customModule="Cocktail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="114"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kx2-rq-ztR">
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="114"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GKK-xz-TEQ">
+                                <rect key="frame" x="14" y="7" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ts0-nO-dfq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lle-M2-sVJ">
+                                <rect key="frame" x="236" y="7" width="43.5" height="25.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="ChalkboardSE-Light"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsE-PV-dhC">
+                                <rect key="frame" x="136" y="34" width="50" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8HH-cK-I3D"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="ChalkboardSE-Light"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GKK-xz-TEQ" firstAttribute="top" secondItem="Lle-M2-sVJ" secondAttribute="top" id="Avq-UO-fL8"/>
+                            <constraint firstItem="GKK-xz-TEQ" firstAttribute="top" secondItem="kx2-rq-ztR" secondAttribute="top" constant="7" id="LCD-Ul-wnX"/>
+                            <constraint firstItem="LsE-PV-dhC" firstAttribute="leading" secondItem="GKK-xz-TEQ" secondAttribute="trailing" constant="22" id="oqR-Ve-Xgs"/>
+                            <constraint firstItem="GKK-xz-TEQ" firstAttribute="centerY" secondItem="kx2-rq-ztR" secondAttribute="centerY" id="tDd-O6-3nl"/>
+                            <constraint firstItem="GKK-xz-TEQ" firstAttribute="leading" secondItem="kx2-rq-ztR" secondAttribute="leading" constant="14" id="tXS-9v-R4l"/>
+                            <constraint firstItem="LsE-PV-dhC" firstAttribute="top" secondItem="kx2-rq-ztR" secondAttribute="top" constant="34" id="vOh-kq-Fn8"/>
+                            <constraint firstItem="Lle-M2-sVJ" firstAttribute="leading" secondItem="GKK-xz-TEQ" secondAttribute="trailing" constant="122" id="whr-6m-EyC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="kx2-rq-ztR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FG0-ce-7ge"/>
+                <constraint firstAttribute="trailing" secondItem="kx2-rq-ztR" secondAttribute="trailing" id="SfB-kh-J2D"/>
+                <constraint firstAttribute="bottom" secondItem="kx2-rq-ztR" secondAttribute="bottom" id="axQ-k7-ay6"/>
+                <constraint firstItem="kx2-rq-ztR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dhr-Cj-rnt"/>
+            </constraints>
+            <size key="customSize" width="401" height="114"/>
+            <connections>
+                <outlet property="cocktailBackView" destination="kx2-rq-ztR" id="TMg-A4-mJ2"/>
+                <outlet property="cocktailDescription" destination="LsE-PV-dhC" id="bPp-Tg-fqO"/>
+                <outlet property="cocktailImage" destination="GKK-xz-TEQ" id="eYE-cb-165"/>
+                <outlet property="cocktailTitle" destination="Lle-M2-sVJ" id="xyE-w4-heV"/>
+            </connections>
+            <point key="canvasLocation" x="181.8840579710145" y="100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
