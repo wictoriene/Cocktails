@@ -25,24 +25,11 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="41y-P7-eQ4">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="1054"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1054" id="k6F-18-kjP"/>
+                        <constraint firstAttribute="height" constant="1054" id="rc1-Dg-Rkb"/>
                     </constraints>
                 </imageView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-Wp-LMA">
-                    <rect key="frame" x="26" y="287" width="362" height="450"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="450" id="fWp-nM-cwt"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tsn-tT-MV2">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUh-ub-0b8">
-                    <rect key="frame" x="26" y="756" width="368" height="46"/>
+                    <rect key="frame" x="26" y="785" width="368" height="46"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" cornerStyle="large">
                         <backgroundConfiguration key="background">
@@ -62,16 +49,10 @@
                         <action selector="barButtonAction:" destination="-1" eventType="touchUpInside" id="25X-Iz-T0E"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="kia-7O-kKM">
-                    <rect key="frame" x="238" y="80" width="176" height="189"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="176" id="c3o-0h-qfe"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-TN-rYr">
-                    <rect key="frame" x="50" y="90" width="219" height="169"/>
+                    <rect key="frame" x="33" y="71" width="219" height="169"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="169" id="woI-Mw-aCK"/>
+                        <constraint firstAttribute="height" constant="169" id="XvR-H6-IR6"/>
                     </constraints>
                     <attributedString key="attributedText">
                         <fragment content="Label">
@@ -84,25 +65,40 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="kia-7O-kKM">
+                    <rect key="frame" x="227" y="71" width="176" height="189"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-Wp-LMA">
+                    <rect key="frame" x="26" y="268" width="362" height="482"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tsn-tT-MV2">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="41y-P7-eQ4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0dB-3A-Ctn"/>
-                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="top" secondItem="hlg-TN-rYr" secondAttribute="bottom" constant="28" id="7cl-qn-LYf"/>
-                <constraint firstItem="PUh-ub-0b8" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="Fwj-gc-yMs"/>
-                <constraint firstAttribute="trailing" secondItem="kia-7O-kKM" secondAttribute="trailing" id="Mp4-NZ-NkH"/>
-                <constraint firstItem="hlg-TN-rYr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Qvf-AC-Udp"/>
-                <constraint firstItem="kia-7O-kKM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="QzO-3a-6Ez"/>
-                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="top" secondItem="kia-7O-kKM" secondAttribute="bottom" constant="18" id="U2c-qm-5hS"/>
-                <constraint firstItem="PUh-ub-0b8" firstAttribute="top" secondItem="2Wt-Wp-LMA" secondAttribute="bottom" constant="19" id="V5z-RC-V9D"/>
-                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="centerX" secondItem="41y-P7-eQ4" secondAttribute="centerX" id="ZFJ-6s-yt0"/>
-                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c9F-u2-eQ8"/>
-                <constraint firstItem="PUh-ub-0b8" firstAttribute="leading" secondItem="2Wt-Wp-LMA" secondAttribute="leading" id="dti-6k-WA8"/>
-                <constraint firstItem="kia-7O-kKM" firstAttribute="leading" secondItem="hlg-TN-rYr" secondAttribute="trailing" constant="-31" id="hXR-Zl-vgD"/>
-                <constraint firstItem="41y-P7-eQ4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lvb-t4-tES"/>
-                <constraint firstItem="hlg-TN-rYr" firstAttribute="leading" secondItem="2Wt-Wp-LMA" secondAttribute="leading" constant="24" id="qU5-mR-lW1"/>
-                <constraint firstItem="hlg-TN-rYr" firstAttribute="centerY" secondItem="kia-7O-kKM" secondAttribute="centerY" id="ypr-Yn-DKr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kia-7O-kKM" secondAttribute="trailing" constant="11" id="1va-M2-LJd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PUh-ub-0b8" secondAttribute="bottom" constant="31" id="7D4-ps-wFO"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9fM-5T-hNr"/>
+                <constraint firstItem="PUh-ub-0b8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="9uW-No-Spq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hlg-TN-rYr" secondAttribute="trailing" constant="162" id="GkU-bf-HUL"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="top" secondItem="kia-7O-kKM" secondAttribute="bottom" constant="8" id="Iiq-Tl-ygi"/>
+                <constraint firstItem="41y-P7-eQ4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KV9-hn-Jms"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PUh-ub-0b8" secondAttribute="trailing" constant="20" id="Voq-F2-awf"/>
+                <constraint firstItem="hlg-TN-rYr" firstAttribute="top" secondItem="kia-7O-kKM" secondAttribute="top" id="iHh-Lw-SSr"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="kbw-ae-xea"/>
+                <constraint firstItem="41y-P7-eQ4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kkY-fO-aIQ"/>
+                <constraint firstItem="kia-7O-kKM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="227" id="oX7-2w-nxg"/>
+                <constraint firstItem="PUh-ub-0b8" firstAttribute="top" secondItem="2Wt-Wp-LMA" secondAttribute="bottom" constant="35" id="qaJ-tu-k9A"/>
+                <constraint firstItem="hlg-TN-rYr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="27" id="sWV-sk-a5K"/>
+                <constraint firstItem="41y-P7-eQ4" firstAttribute="centerX" secondItem="2Wt-Wp-LMA" secondAttribute="centerX" id="t0o-xT-V6a"/>
+                <constraint firstItem="hlg-TN-rYr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="ucb-gV-7E5"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="top" secondItem="hlg-TN-rYr" secondAttribute="bottom" constant="28" id="w5E-jT-rbH"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
         </view>

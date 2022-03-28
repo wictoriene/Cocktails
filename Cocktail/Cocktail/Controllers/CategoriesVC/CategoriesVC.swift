@@ -14,12 +14,6 @@ import Firebase
 
 
   class CategoriesVC: UIViewController {
-      
-//      var data:[DataSnapshot] = [] {
-//          didSet{
-//              print(data)
-//          }
-//      }
     
      @IBOutlet private weak var appLogo: UIImageView!
      @IBOutlet private weak var categoriesCollection: UICollectionView!
@@ -27,16 +21,16 @@ import Firebase
      @IBOutlet private weak var barButton: UIButton!
       
       var reloadCategoriesDelegate: ReloadCtegories?
-      var choosenCategory = 0
       
       var categoriesData:[CategoryModel]=[
-        CategoryModel(image: UIImage(named: "classic")!, title: ""),
-        CategoryModel(image: UIImage(named: "mocktail")!, title:""),
-        CategoryModel(image: UIImage(named: "short")!, title: ""),
-        CategoryModel(image: UIImage(named: "shots")!, title: ""),
-        CategoryModel(image: UIImage(named: "twist")!, title: ""),
-        CategoryModel(image: UIImage(named: "hot")!, title:""),
-        CategoryModel(image: UIImage(named: "long")!, title: "")]
+        CategoryModel(image: UIImageView(image: UIImage(named: "classic")!), title: "Classic"),
+        CategoryModel(image: UIImageView(image: UIImage(named: "hot")!), title: "Hot"),
+        CategoryModel(image: UIImageView(image: UIImage(named: "long")!), title: "Long"),
+        CategoryModel(image: UIImageView(image: UIImage(named: "mocktail")!), title: "mocktail"),
+        CategoryModel(image: UIImageView(image: UIImage(named: "saur")!), title: "saur"),
+        CategoryModel(image: UIImageView(image: UIImage(named: "shots")!), title: "shots"),
+        CategoryModel(image: UIImageView(image: UIImage(named: "short")!), title: "short"),
+        CategoryModel(image: UIImageView(image: UIImage(named: "deserts")!), title: "deserts")]
       
 
     override func viewDidLoad() {
@@ -50,7 +44,7 @@ import Firebase
         appDescriptionLabel.text = "По-настоящему важные" + " дела обсуждаются во" + " время коктейля."
         
         categoriesCollection.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: CategoryCell.identifier)
-
+    
     }
     
       @IBAction func barButtonAction(_ sender: Any) {
@@ -67,22 +61,16 @@ extension CategoriesVC: UICollectionViewDelegate, UICollectionViewDataSource{
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = categoriesCollection.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as! CategoryCell
-        cell.update(for: categoriesData[indexPath.row])
-        cell.configureButton()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as! CategoryCell
+        cell.image.image = categoriesData[indexPath.row].image.image
+        cell.title.text = categoriesData[indexPath.row].title
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = categoriesCollection.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as! CategoryCell
-        cell.categoryButton.tag = indexPath.row
-        if indexPath.row == choosenCategory{
-            let vc = CocktailsListVC()
-            navigationController?.pushViewController(vc, animated: true)
-            print("tap")
-        }
-        cell.choosenCategoryCellDelegate = self
-  
+        let vc = CocktailsListVC(nibName: String(describing: CocktailsListVC.self), bundle: nil)
+        vc.choosenCategoryText = categoriesData[indexPath.row].title
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
@@ -93,20 +81,11 @@ extension CategoriesVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 25
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-}
-
-extension CategoriesVC: UpdateChooseCategory {
-    func choosenCategory(tag: Int) {
-        choosenCategory = tag
-        categoriesCollection.reloadData()
-        reloadCategoriesDelegate?.reloadCategories(indexPath: tag)
-        
+        return 5
     }
 }
 

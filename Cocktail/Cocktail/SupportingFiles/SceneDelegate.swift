@@ -21,12 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let launchController = ViewController()
         launchController.completion = { [weak self] in
-            let launchController = CategoriesVC()
+            let launchController = UINavigationController(rootViewController: CategoriesVC())
             self?.window?.rootViewController = launchController
             self?.window?.rootViewController = launchController
         }
         
-        window?.rootViewController = launchController
+        window?.rootViewController =  launchController
         window?.makeKeyAndVisible()
 
         
@@ -36,11 +36,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func configureNavBar() {
         if #available(iOS 15.0, *) {
             let navigationBarAppearance = UINavigationBarAppearance()
-            navigationBarAppearance.shadowColor = .clear
+            navigationBarAppearance.shadowColor = .white
             UINavigationBar.appearance().standardAppearance = navigationBarAppearance
             UINavigationBar.appearance().compactAppearance = navigationBarAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-            UINavigationBar.appearance().tintColor = .green
+            UINavigationBar.appearance().tintColor = UIColor(red: 101/255, green: 104/255, blue: 173/255, alpha: 1)
         }
     }
 
