@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 class CategoryModel {
-    var image: UIImage
+    var image: UIImageView
     var title: String
     
-    init (image:UIImage, title: String){
+    init (image:UIImageView, title: String){
         self.image = image
         self.title = title
     }

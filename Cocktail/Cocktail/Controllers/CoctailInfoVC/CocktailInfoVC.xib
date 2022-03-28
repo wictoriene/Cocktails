@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CocktailInfoVC" customModule="Cocktail" customModuleProvider="target">
             <connections>
+                <outlet property="cocktailTitle" destination="JeK-Us-kbD" id="qDE-a1-g30"/>
+                <outlet property="image" destination="60K-1i-vD2" id="ivY-GJ-ll6"/>
+                <outlet property="ingredientsCollection" destination="jHQ-ju-7R7" id="Z8F-EM-fyN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,21 +44,8 @@
                         <constraint firstAttribute="height" constant="240" id="XFC-qb-jFr"/>
                     </constraints>
                 </imageView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4yz-zl-yFv">
-                    <rect key="frame" x="20" y="421" width="374" height="351"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="351" id="xXA-fx-CFw"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="46G-oC-Vx5">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVo-FY-dWV">
-                    <rect key="frame" x="20" y="793" width="374" height="39.5"/>
+                    <rect key="frame" x="146" y="793" width="122" height="39.5"/>
                     <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled">
@@ -69,22 +59,29 @@
                         </attributedString>
                         <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="cookButton:" destination="-1" eventType="touchUpInside" id="Lql-Sf-K3J"/>
+                    </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jHQ-ju-7R7">
+                    <rect key="frame" x="25" y="414" width="374" height="357"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4yz-zl-yFv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="49a-LF-Ncz"/>
-                <constraint firstItem="4yz-zl-yFv" firstAttribute="top" secondItem="60K-1i-vD2" secondAttribute="bottom" constant="26" id="8rJ-WR-qnv"/>
+                <constraint firstItem="sVo-FY-dWV" firstAttribute="top" secondItem="jHQ-ju-7R7" secondAttribute="bottom" constant="22" id="3kO-Vn-rS5"/>
                 <constraint firstItem="JeK-Us-kbD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="8vZ-7R-sA9"/>
                 <constraint firstItem="JeK-Us-kbD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="166" id="A0Y-MI-o2h"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JeK-Us-kbD" secondAttribute="trailing" constant="156" id="Fih-a3-uIV"/>
-                <constraint firstItem="sVo-FY-dWV" firstAttribute="top" secondItem="4yz-zl-yFv" secondAttribute="bottom" constant="21" id="JGj-fW-OdM"/>
                 <constraint firstItem="60K-1i-vD2" firstAttribute="top" secondItem="JeK-Us-kbD" secondAttribute="bottom" constant="69" id="LJM-od-beI"/>
                 <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="buh-l6-BDF" secondAttribute="centerX" id="Uee-HZ-Ddb"/>
-                <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="4yz-zl-yFv" secondAttribute="centerX" id="ZyR-nP-yWR"/>
-                <constraint firstItem="4yz-zl-yFv" firstAttribute="leading" secondItem="sVo-FY-dWV" secondAttribute="leading" id="iOt-yZ-7gK"/>
+                <constraint firstItem="jHQ-ju-7R7" firstAttribute="centerX" secondItem="JeK-Us-kbD" secondAttribute="centerX" id="f2R-a9-R2A"/>
+                <constraint firstItem="jHQ-ju-7R7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="gj7-PU-QKN"/>
+                <constraint firstItem="jHQ-ju-7R7" firstAttribute="top" secondItem="60K-1i-vD2" secondAttribute="bottom" constant="19" id="lCi-i7-1k6"/>
                 <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="sVo-FY-dWV" secondAttribute="centerX" id="m2p-FC-SAw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sVo-FY-dWV" secondAttribute="bottom" constant="29.5" id="mzK-bY-t11"/>
                 <constraint firstItem="60K-1i-vD2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="pdF-eE-XUR"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="62.946428571428569"/>

@@ -17,12 +17,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ1-wC-Ut6">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ1-wC-Ut6">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ll9-Sc-1oC">
+                                <rect key="frame" x="60" y="38" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="oxg-oj-bGv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcK-BV-HTY">
+                                <rect key="frame" x="104" y="185" width="44" height="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="ChalkboardSE-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ll9-Sc-1oC" firstAttribute="leading" secondItem="yZ1-wC-Ut6" secondAttribute="leading" constant="60" id="Aeb-WC-d30"/>
+                            <constraint firstItem="hcK-BV-HTY" firstAttribute="leading" secondItem="yZ1-wC-Ut6" secondAttribute="leading" constant="104" id="HBk-bT-3R2"/>
                             <constraint firstAttribute="width" constant="250" id="PqN-XO-8AF"/>
+                            <constraint firstItem="ll9-Sc-1oC" firstAttribute="top" secondItem="yZ1-wC-Ut6" secondAttribute="top" constant="38" id="qyl-Ka-pET"/>
+                            <constraint firstItem="hcK-BV-HTY" firstAttribute="top" secondItem="ll9-Sc-1oC" secondAttribute="bottom" constant="17" id="tdE-pF-AHz"/>
+                            <constraint firstItem="ll9-Sc-1oC" firstAttribute="centerX" secondItem="yZ1-wC-Ut6" secondAttribute="centerX" id="xFD-PM-HFu"/>
                             <constraint firstAttribute="height" constant="250" id="xdY-QG-fb3"/>
                         </constraints>
                     </view>
@@ -35,7 +60,9 @@
             </constraints>
             <size key="customSize" width="250" height="250"/>
             <connections>
-                <outlet property="view" destination="yZ1-wC-Ut6" id="aam-Ce-g7t"/>
+                <outlet property="backView" destination="yZ1-wC-Ut6" id="MVv-iR-bUn"/>
+                <outlet property="image" destination="ll9-Sc-1oC" id="4Rn-IX-vpe"/>
+                <outlet property="title" destination="hcK-BV-HTY" id="g20-KO-Th1"/>
             </connections>
             <point key="canvasLocation" x="282.60869565217394" y="162.05357142857142"/>
         </collectionViewCell>
