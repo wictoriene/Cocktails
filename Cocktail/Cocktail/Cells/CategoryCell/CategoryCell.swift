@@ -20,12 +20,12 @@ class CategoryCell: UICollectionViewCell {
         super.awakeFromNib()
         backView.backgroundColor = .tertiarySystemGroupedBackground
         backView.layer.cornerRadius = 15
+        image.contentMode = .scaleAspectFit
     
     }
     
     func update(for categoryModel: CategoryModel) {
         image = categoryModel.image
-        title.text = categoryModel.title
     }
 }
 

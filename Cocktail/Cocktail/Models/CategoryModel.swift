@@ -10,10 +10,8 @@ import UIKit
 
 class CategoryModel {
     var image: UIImageView
-    var title: String
     
-    init (image:UIImageView, title: String){
+    init (image:UIImageView){
         self.image = image
-        self.title = title
     }
 }

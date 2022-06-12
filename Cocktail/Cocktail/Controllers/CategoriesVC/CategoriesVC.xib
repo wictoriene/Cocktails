@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,6 @@
             <connections>
                 <outlet property="appDescriptionLabel" destination="hlg-TN-rYr" id="f5c-im-qC5"/>
                 <outlet property="appLogo" destination="kia-7O-kKM" id="cDd-u4-mSI"/>
-                <outlet property="barButton" destination="PUh-ub-0b8" id="WF5-i6-mNB"/>
                 <outlet property="categoriesCollection" destination="2Wt-Wp-LMA" id="lIc-Kt-Jfd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,27 +27,6 @@
                         <constraint firstAttribute="height" constant="1054" id="rc1-Dg-Rkb"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUh-ub-0b8">
-                    <rect key="frame" x="26" y="785" width="368" height="46"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" cornerStyle="large">
-                        <backgroundConfiguration key="background">
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </backgroundConfiguration>
-                        <attributedString key="attributedTitle">
-                            <fragment content="Мой бар">
-                                <attributes>
-                                    <font key="NSFont" size="22" name="ChalkboardSE-Regular"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="barButtonAction:" destination="-1" eventType="touchUpInside" id="25X-Iz-T0E"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-TN-rYr">
                     <rect key="frame" x="33" y="71" width="219" height="169"/>
                     <constraints>
@@ -69,7 +47,7 @@
                     <rect key="frame" x="227" y="71" width="176" height="189"/>
                 </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-Wp-LMA">
-                    <rect key="frame" x="26" y="268" width="362" height="482"/>
+                    <rect key="frame" x="26" y="268" width="362" height="575"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tsn-tT-MV2">
                         <size key="itemSize" width="128" height="128"/>
@@ -83,18 +61,15 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kia-7O-kKM" secondAttribute="trailing" constant="11" id="1va-M2-LJd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PUh-ub-0b8" secondAttribute="bottom" constant="31" id="7D4-ps-wFO"/>
                 <constraint firstItem="2Wt-Wp-LMA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9fM-5T-hNr"/>
-                <constraint firstItem="PUh-ub-0b8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="9uW-No-Spq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hlg-TN-rYr" secondAttribute="trailing" constant="162" id="GkU-bf-HUL"/>
                 <constraint firstItem="2Wt-Wp-LMA" firstAttribute="top" secondItem="kia-7O-kKM" secondAttribute="bottom" constant="8" id="Iiq-Tl-ygi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2Wt-Wp-LMA" secondAttribute="bottom" constant="19" id="Jlf-zw-4nf"/>
                 <constraint firstItem="41y-P7-eQ4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KV9-hn-Jms"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PUh-ub-0b8" secondAttribute="trailing" constant="20" id="Voq-F2-awf"/>
                 <constraint firstItem="hlg-TN-rYr" firstAttribute="top" secondItem="kia-7O-kKM" secondAttribute="top" id="iHh-Lw-SSr"/>
                 <constraint firstItem="2Wt-Wp-LMA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="kbw-ae-xea"/>
                 <constraint firstItem="41y-P7-eQ4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kkY-fO-aIQ"/>
                 <constraint firstItem="kia-7O-kKM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="227" id="oX7-2w-nxg"/>
-                <constraint firstItem="PUh-ub-0b8" firstAttribute="top" secondItem="2Wt-Wp-LMA" secondAttribute="bottom" constant="35" id="qaJ-tu-k9A"/>
                 <constraint firstItem="hlg-TN-rYr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="27" id="sWV-sk-a5K"/>
                 <constraint firstItem="41y-P7-eQ4" firstAttribute="centerX" secondItem="2Wt-Wp-LMA" secondAttribute="centerX" id="t0o-xT-V6a"/>
                 <constraint firstItem="hlg-TN-rYr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="ucb-gV-7E5"/>
