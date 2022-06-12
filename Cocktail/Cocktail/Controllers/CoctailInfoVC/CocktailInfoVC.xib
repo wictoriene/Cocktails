@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="cocktailTitle" destination="JeK-Us-kbD" id="qDE-a1-g30"/>
                 <outlet property="image" destination="60K-1i-vD2" id="ivY-GJ-ll6"/>
-                <outlet property="ingredientsCollection" destination="jHQ-ju-7R7" id="Z8F-EM-fyN"/>
+                <outlet property="ingredientCollection" destination="pdd-Nr-PPp" id="I2i-7d-dH5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,9 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" id="buh-l6-BDF">
-                    <rect key="frame" x="0.0" y="-128" width="414" height="990"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Fjc-kL-s2g">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1165"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeK-Us-kbD">
                     <rect key="frame" x="166" y="60" width="92" height="26"/>
@@ -38,7 +37,7 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="60K-1i-vD2">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classic" translatesAutoresizingMaskIntoConstraints="NO" id="60K-1i-vD2">
                     <rect key="frame" x="87" y="155" width="240" height="240"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="240" id="XFC-qb-jFr"/>
@@ -49,6 +48,9 @@
                     <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        </backgroundConfiguration>
                         <attributedString key="attributedTitle">
                             <fragment content="Приготовить">
                                 <attributes>
@@ -63,35 +65,43 @@
                         <action selector="cookButton:" destination="-1" eventType="touchUpInside" id="Lql-Sf-K3J"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jHQ-ju-7R7">
-                    <rect key="frame" x="25" y="414" width="374" height="357"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pdd-Nr-PPp">
+                    <rect key="frame" x="20" y="432" width="374" height="331"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="idx-nu-e7w">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="sVo-FY-dWV" firstAttribute="top" secondItem="jHQ-ju-7R7" secondAttribute="bottom" constant="22" id="3kO-Vn-rS5"/>
                 <constraint firstItem="JeK-Us-kbD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="8vZ-7R-sA9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fjc-kL-s2g" secondAttribute="trailing" id="9DI-XA-KfV"/>
                 <constraint firstItem="JeK-Us-kbD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="166" id="A0Y-MI-o2h"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JeK-Us-kbD" secondAttribute="trailing" constant="156" id="Fih-a3-uIV"/>
                 <constraint firstItem="60K-1i-vD2" firstAttribute="top" secondItem="JeK-Us-kbD" secondAttribute="bottom" constant="69" id="LJM-od-beI"/>
-                <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="buh-l6-BDF" secondAttribute="centerX" id="Uee-HZ-Ddb"/>
-                <constraint firstItem="jHQ-ju-7R7" firstAttribute="centerX" secondItem="JeK-Us-kbD" secondAttribute="centerX" id="f2R-a9-R2A"/>
-                <constraint firstItem="jHQ-ju-7R7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="gj7-PU-QKN"/>
-                <constraint firstItem="jHQ-ju-7R7" firstAttribute="top" secondItem="60K-1i-vD2" secondAttribute="bottom" constant="19" id="lCi-i7-1k6"/>
+                <constraint firstItem="pdd-Nr-PPp" firstAttribute="top" secondItem="60K-1i-vD2" secondAttribute="bottom" constant="37" id="LMf-DE-Uen"/>
+                <constraint firstItem="sVo-FY-dWV" firstAttribute="top" secondItem="pdd-Nr-PPp" secondAttribute="bottom" constant="30" id="OwB-qc-iOk"/>
+                <constraint firstItem="pdd-Nr-PPp" firstAttribute="top" secondItem="Fjc-kL-s2g" secondAttribute="bottom" constant="-733" id="TZO-Y8-4e4"/>
+                <constraint firstItem="Fjc-kL-s2g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZHa-ms-DHF"/>
+                <constraint firstItem="pdd-Nr-PPp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="aNS-dH-Lxb"/>
+                <constraint firstItem="pdd-Nr-PPp" firstAttribute="centerX" secondItem="sVo-FY-dWV" secondAttribute="centerX" id="gFx-UD-E7t"/>
+                <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hlb-Xh-HhW"/>
                 <constraint firstItem="60K-1i-vD2" firstAttribute="centerX" secondItem="sVo-FY-dWV" secondAttribute="centerX" id="m2p-FC-SAw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sVo-FY-dWV" secondAttribute="bottom" constant="29.5" id="mzK-bY-t11"/>
                 <constraint firstItem="60K-1i-vD2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="pdF-eE-XUR"/>
+                <constraint firstItem="Fjc-kL-s2g" firstAttribute="top" secondItem="JeK-Us-kbD" secondAttribute="bottom" constant="-86" id="raB-fJ-1EH"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="62.946428571428569"/>
         </view>
     </objects>
     <resources>
-        <image name="back" width="360" height="640"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="background" width="360" height="640"/>
+        <image name="classic" width="392" height="520"/>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -47,14 +47,31 @@ class ApiManager {
             guard error == nil else {
                 print(error!.localizedDescription)
                 return
-                
+
             }
-//            cocktails.append(CocktailListModel(id: "", title: "", description: "", imagePath: ""))
+            cocktails.append(CocktailListModel(categories: "", id: "", title: "", description: "", imagePath: ""))
             print(snapshot)
-           
+
         }
         return cocktails
     }
+    
+    func getIngredientsData() -> [IngredientsModel] {
+        var ingredients: [IngredientsModel] = []
+        ref = Database.database().reference()
+        ref.child("Ingredients").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+
+            }
+            ingredients.append(IngredientsModel(ingredients: "", id: "", imagePath: "", title: "", volume: ""))
+            print(snapshot)
+
+        }
+        return ingredients
+    }
+
     
     
 }

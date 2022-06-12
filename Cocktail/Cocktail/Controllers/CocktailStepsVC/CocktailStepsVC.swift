@@ -6,24 +6,37 @@
 //
 
 import UIKit
+import Lottie
 
 class CocktailStepsVC: UIViewController {
+    
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var stepOrder: UILabel!
+    @IBOutlet weak var stepLabel: UILabel!
+    
+    private var animationView: AnimationView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        mainView.layer.cornerRadius = 15
+        animatedScreen()
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func animatedScreen(){
+        animationView = .init(name: "bar")
+        animationView!.frame = CGRect(x: 30, y: 515, width: 120, height: 120)
+        animationView!.backgroundColor = .white
+        animationView!.contentMode = .scaleAspectFill
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 1.5
+        view.addSubview(animationView!)
+        animationView.play()
     }
-    */
+    
+    
+    
+    
+    
+  }
 
-}

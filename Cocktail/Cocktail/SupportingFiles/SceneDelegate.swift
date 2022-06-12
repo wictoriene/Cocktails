@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         configureNavBar()
         window?.windowScene = windowScene
         
+        
         let launchController = ViewController()
         launchController.completion = { [weak self] in
             let launchController = UINavigationController(rootViewController: CategoriesVC())

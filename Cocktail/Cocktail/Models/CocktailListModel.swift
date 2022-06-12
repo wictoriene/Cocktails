@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct CocktailListModel{
+    var categories : String
     var id: String
     var title: String
     var description: String

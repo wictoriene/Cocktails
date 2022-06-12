@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="IngredientsCell" customModule="Cocktail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="69"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="69"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBm-kp-04O">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="69"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitter" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-gH-rza">
+                                <rect key="frame" x="18" y="4" width="50" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bfO-R5-AlQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCC-uR-76d">
+                                <rect key="frame" x="127" y="23" width="87" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ингредиент">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="ChalkboardSE-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-95-Oyq">
+                                <rect key="frame" x="293" y="23" width="54" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="размер">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="ChalkboardSE-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sk1-gH-rza" firstAttribute="leading" secondItem="gBm-kp-04O" secondAttribute="leading" constant="18" id="DQH-02-pVt"/>
+                            <constraint firstItem="QCC-uR-76d" firstAttribute="baseline" secondItem="djl-95-Oyq" secondAttribute="baseline" id="DbN-02-hlZ"/>
+                            <constraint firstItem="sk1-gH-rza" firstAttribute="bottom" secondItem="gBm-kp-04O" secondAttribute="bottomMargin" id="Mtq-Vi-Kxc"/>
+                            <constraint firstItem="QCC-uR-76d" firstAttribute="leading" secondItem="sk1-gH-rza" secondAttribute="trailing" constant="59" id="RjI-tU-4ou"/>
+                            <constraint firstItem="QCC-uR-76d" firstAttribute="centerY" secondItem="gBm-kp-04O" secondAttribute="centerY" id="cSM-5O-U4i"/>
+                            <constraint firstItem="sk1-gH-rza" firstAttribute="top" secondItem="gBm-kp-04O" secondAttribute="top" constant="4" id="hr6-V9-hf7"/>
+                            <constraint firstItem="djl-95-Oyq" firstAttribute="leading" secondItem="QCC-uR-76d" secondAttribute="trailing" constant="79" id="llC-S8-jvN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="gBm-kp-04O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5U1-rQ-QHc"/>
+                <constraint firstAttribute="bottom" secondItem="gBm-kp-04O" secondAttribute="bottom" id="QhI-s8-PhP"/>
+                <constraint firstItem="gBm-kp-04O" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="l0s-pf-HMJ"/>
+                <constraint firstAttribute="trailing" secondItem="gBm-kp-04O" secondAttribute="trailing" id="nBc-2E-BBj"/>
+            </constraints>
+            <size key="customSize" width="365" height="69"/>
+            <connections>
+                <outlet property="backView" destination="gBm-kp-04O" id="TnH-cy-Ufh"/>
+                <outlet property="ingredientImage" destination="sk1-gH-rza" id="jgS-Hh-eHs"/>
+                <outlet property="size" destination="djl-95-Oyq" id="Z4A-Nr-8lC"/>
+                <outlet property="title" destination="QCC-uR-76d" id="SRp-rE-aW5"/>
+            </connections>
+            <point key="canvasLocation" x="244.20289855072465" y="-17.075892857142858"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bitter" width="346" height="454"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
