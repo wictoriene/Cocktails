@@ -5,6 +5,8 @@ target 'Cocktail' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  # Pods for Cocktail
+
   pod 'Moya'
   pod 'Moya-ObjectMapper'
   pod 'SDWebImage'
@@ -15,5 +17,6 @@ pod 'Firebase/Storage'
 pod 'FirebaseDatabase'
 pod 'Firebase/Firestore'
 pod 'FirebaseStorage'
+
 
 end
