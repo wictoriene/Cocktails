@@ -55,11 +55,16 @@
                         <constraints>
                             <constraint firstItem="sk1-gH-rza" firstAttribute="leading" secondItem="gBm-kp-04O" secondAttribute="leading" constant="18" id="DQH-02-pVt"/>
                             <constraint firstItem="QCC-uR-76d" firstAttribute="baseline" secondItem="djl-95-Oyq" secondAttribute="baseline" id="DbN-02-hlZ"/>
+                            <constraint firstItem="QCC-uR-76d" firstAttribute="top" secondItem="gBm-kp-04O" secondAttribute="top" constant="23" id="Fv9-D3-Qf4"/>
                             <constraint firstItem="sk1-gH-rza" firstAttribute="bottom" secondItem="gBm-kp-04O" secondAttribute="bottomMargin" id="Mtq-Vi-Kxc"/>
                             <constraint firstItem="QCC-uR-76d" firstAttribute="leading" secondItem="sk1-gH-rza" secondAttribute="trailing" constant="59" id="RjI-tU-4ou"/>
+                            <constraint firstAttribute="bottom" secondItem="djl-95-Oyq" secondAttribute="bottom" constant="23" id="Zvv-l1-vBW"/>
                             <constraint firstItem="QCC-uR-76d" firstAttribute="centerY" secondItem="gBm-kp-04O" secondAttribute="centerY" id="cSM-5O-U4i"/>
                             <constraint firstItem="sk1-gH-rza" firstAttribute="top" secondItem="gBm-kp-04O" secondAttribute="top" constant="4" id="hr6-V9-hf7"/>
+                            <constraint firstItem="djl-95-Oyq" firstAttribute="top" secondItem="gBm-kp-04O" secondAttribute="top" constant="23" id="j4l-vT-DwT"/>
                             <constraint firstItem="djl-95-Oyq" firstAttribute="leading" secondItem="QCC-uR-76d" secondAttribute="trailing" constant="79" id="llC-S8-jvN"/>
+                            <constraint firstAttribute="trailing" secondItem="djl-95-Oyq" secondAttribute="trailing" constant="18" id="n6Z-po-3P3"/>
+                            <constraint firstAttribute="bottom" secondItem="sk1-gH-rza" secondAttribute="bottom" constant="8" id="qDa-iY-ge1"/>
                         </constraints>
                     </view>
                 </subviews>

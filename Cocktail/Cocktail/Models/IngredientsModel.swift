@@ -9,9 +9,5 @@ import Foundation
 import UIKit
 
 struct IngredientsModel{
-    var ingredients : String
-    var id: String
-    var imagePath: String
-    var title: String
-    var volume: String
+    var ingredients:[String:String]
 }

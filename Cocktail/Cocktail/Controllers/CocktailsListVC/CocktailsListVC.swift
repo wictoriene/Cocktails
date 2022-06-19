@@ -14,13 +14,14 @@ class CocktailsListVC: UIViewController {
     @IBOutlet weak var cocktailsList: UICollectionView!
     
     
-    var categoryEnum: CategoriesEnum = .berry
+    var categoryEnum: CategoriesEnum = .coffee
     
     var categoryArray:[String] = []
     
     var dataSource:[CocktailListModel] = []{
         didSet{
             cocktailsList.reloadData()
+            print(dataSource)
         }
     }
     var choosenCocktail = 0
@@ -37,34 +38,53 @@ class CocktailsListVC: UIViewController {
         
     }
     
-    private func filtrDataSource() {
+//    private func filterDataSource() {
 //  Тебе нужно добавит в структуру переменную(масив) категорий, потом пробегаться циклом по массиву который пришел из Firebase ты выбираешь каждый элеиент и у этого элемента проверяешь категории с енамом
-        for dataSource in dataSource {
-            if dataSource.categories == categoryEnum.categoriesName {
-            }
-        }
-    }
+//        for dataSource in dataSource {
+//            if dataSource.categories ==categoryEnum.categoriesName {
+//            }
+//        }
+//    }
     
-    private func getrealmTime(){
+ private func getrealmTime(){
         var ref: DatabaseReference!
         ref = Database.database().reference()
         
         ApiManager.shared.getrealmTime { snapshot in
             if let array = snapshot?.value as? [[String:Any]]{
                 for aValue in array {
-                    let categories = aValue["categories"] as? String ?? "nocategories"
+                    let categories = aValue["categories"] as? [String] ?? []
                     let id = aValue["id"] as? String ?? "noid"
                     let title = aValue["title"] as? String ?? "notitle"
                     let description = aValue["description"] as? String ?? "nodescription"
                     let imagePath = aValue["imagePath"] as? String ?? "noimagePath"
-                    let cocktails = CocktailListModel(categories: categories, id: id, title: title, description: description, imagePath: imagePath)
-                    self.dataSource.append(cocktails)
+                    
+                    let ingredientsMap = aValue["ingredients"] as? [[String:Any]] ?? []
+                    let ingredients = ingredientsMap.map { (ingredient) -> IngredientModel in
+                        let id = ingredient["id"] as! String
+                        let volume = ingredient["volume"] as! String
+                        
+                        let type = ingredient["type"] as! [String:Any]
+                        let ingredientType = IngredientTypeModel(id: type["id"] as! String, imagePath: type["imagePath"] as! String, title: type["title"] as! String)
+            
+                        return IngredientModel(id: id, volume: volume, type: ingredientType)
+                    }
+                    
+                    let stepsMap = aValue["steps"] as? [[String:Any]] ??  []
+                    let steps = stepsMap.map{(step) -> CocktailPreparingStepModel in
+                        return CocktailPreparingStepModel(description: step["description"] as! String, oder: step["order"] as! Int64)
+                    }
+                    
+                let cocktails = CocktailListModel(categories: categories, id: id, title: title, description: description, imagePath: imagePath, ingredients: ingredients, steps: steps)
+                    
+                self.dataSource.append(cocktails)
+                    
                 }
             }
         }
     }
-    
 }
+
 
 //MARK: exstension CocktailsListVC
 
@@ -91,4 +111,4 @@ extension CocktailsListVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: Int(UIScreen.main.bounds.width) - 10, height:  Int(UIScreen.main.bounds.width / 4))
     }
-}
+  }
