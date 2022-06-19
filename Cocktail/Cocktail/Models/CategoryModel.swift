@@ -15,3 +15,5 @@ class CategoryModel {
         self.image = image
     }
 }
+
+

@@ -49,30 +49,13 @@ class ApiManager {
                 return
 
             }
-            cocktails.append(CocktailListModel(categories: "", id: "", title: "", description: "", imagePath: ""))
+            cocktails.append(CocktailListModel(categories: [""], id: "", title: "", description: "", imagePath: "", ingredients: [], steps: []))
             print(snapshot)
 
         }
         return cocktails
     }
-    
-    func getIngredientsData() -> [IngredientsModel] {
-        var ingredients: [IngredientsModel] = []
-        ref = Database.database().reference()
-        ref.child("Ingredients").getData { error, snapshot in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
 
-            }
-            ingredients.append(IngredientsModel(ingredients: "", id: "", imagePath: "", title: "", volume: ""))
-            print(snapshot)
-
-        }
-        return ingredients
-    }
-
-    
     
 }
 

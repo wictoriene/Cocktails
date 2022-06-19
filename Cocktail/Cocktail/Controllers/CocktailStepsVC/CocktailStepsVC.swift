@@ -7,6 +7,8 @@
 
 import UIKit
 import Lottie
+import Firebase
+import SDWebImage
 
 class CocktailStepsVC: UIViewController {
     
@@ -15,11 +17,14 @@ class CocktailStepsVC: UIViewController {
     @IBOutlet weak var stepLabel: UILabel!
     
     private var animationView: AnimationView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.layer.cornerRadius = 15
         animatedScreen()
+        
         
     }
     
@@ -33,8 +38,6 @@ class CocktailStepsVC: UIViewController {
         view.addSubview(animationView!)
         animationView.play()
     }
-    
-    
     
     
     

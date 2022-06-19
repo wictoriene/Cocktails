@@ -35,8 +35,6 @@
 		FBCD909B285A6AF70009B0D6 /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD9094285A6AF70009B0D6 /* IngredientsCell.swift */; };
 		FBCD909C285A6AF70009B0D6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD9096285A6AF70009B0D6 /* CategoryCell.swift */; };
 		FBCD909D285A6AF70009B0D6 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCD9097285A6AF70009B0D6 /* CategoryCell.xib */; };
-		FBCD90A0285A6BB90009B0D6 /* StepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD909E285A6BB90009B0D6 /* StepsModel.swift */; };
-		FBCD90A1285A6BB90009B0D6 /* IngredientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD909F285A6BB90009B0D6 /* IngredientsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,8 +70,6 @@
 		FBCD9094285A6AF70009B0D6 /* IngredientsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
 		FBCD9096285A6AF70009B0D6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FBCD9097285A6AF70009B0D6 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
-		FBCD909E285A6BB90009B0D6 /* StepsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsModel.swift; sourceTree = "<group>"; };
-		FBCD909F285A6BB90009B0D6 /* IngredientsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +190,6 @@
 			children = (
 				FB68FE2927D936CF00C35D8B /* CategoryModel.swift */,
 				FB99C6FD27E7CBED00B80168 /* CocktailListModel.swift */,
-				FBCD909F285A6BB90009B0D6 /* IngredientsModel.swift */,
-				FBCD909E285A6BB90009B0D6 /* StepsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,8 +242,8 @@
 		FBCD908F285A6AF70009B0D6 /* CocktailsCell */ = {
 			isa = PBXGroup;
 			children = (
-				FBCD9090285A6AF70009B0D6 /* CocktailList.xib */,
 				FBCD9091285A6AF70009B0D6 /* CocktailList.swift */,
+				FBCD9090285A6AF70009B0D6 /* CocktailList.xib */,
 			);
 			path = CocktailsCell;
 			sourceTree = "<group>";
@@ -257,8 +251,8 @@
 		FBCD9092285A6AF70009B0D6 /* IngredientsCell */ = {
 			isa = PBXGroup;
 			children = (
-				FBCD9093285A6AF70009B0D6 /* IngredientsCell.xib */,
 				FBCD9094285A6AF70009B0D6 /* IngredientsCell.swift */,
+				FBCD9093285A6AF70009B0D6 /* IngredientsCell.xib */,
 			);
 			path = IngredientsCell;
 			sourceTree = "<group>";
@@ -418,7 +412,6 @@
 				FBCD909C285A6AF70009B0D6 /* CategoryCell.swift in Sources */,
 				FBCD9099285A6AF70009B0D6 /* CocktailList.swift in Sources */,
 				FB180D6227CF7CC300168FAC /* CategoriesVC.swift in Sources */,
-				FBCD90A0285A6BB90009B0D6 /* StepsModel.swift in Sources */,
 				FB99C6FE27E7CBED00B80168 /* CocktailListModel.swift in Sources */,
 				FB61A01227CF76240011F8A4 /* ViewController.swift in Sources */,
 				FB180D6B27CF8B2700168FAC /* APIManager.swift in Sources */,
@@ -429,7 +422,6 @@
 				FBCD909B285A6AF70009B0D6 /* IngredientsCell.swift in Sources */,
 				FB61A01027CF76240011F8A4 /* SceneDelegate.swift in Sources */,
 				FB9DEE6627E7D27000E8BC30 /* CocktailStepsVC.swift in Sources */,
-				FBCD90A1285A6BB90009B0D6 /* IngredientsModel.swift in Sources */,
 				FB9DEE6127E7D21B00E8BC30 /* CocktailInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +459,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = /Users/wictoriene/Desktop/Cocktails/Cocktail/Cocktail/;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -528,6 +521,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = /Users/wictoriene/Desktop/Cocktails/Cocktail/Cocktail/;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -578,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Cocktail/Cocktail.entitlements;
+				CLANG_OPTIMIZATION_PROFILE_FILE = /Users/wictoriene/Desktop/Cocktails/Cocktail/Cocktail/;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -610,7 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Cocktail/Cocktail.entitlements;
+				CLANG_OPTIMIZATION_PROFILE_FILE = /Users/wictoriene/Desktop/Cocktails/Cocktail/Cocktail/;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

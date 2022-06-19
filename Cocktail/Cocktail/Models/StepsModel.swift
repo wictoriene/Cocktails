@@ -9,6 +9,5 @@ import Foundation
 import UIKit
 
 struct StepsModel {
-    var description: String
-    var order: String
+    var steps: [String]
 }
