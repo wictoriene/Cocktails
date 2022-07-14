@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesVC" customModule="Cocktail" customModuleProvider="target">
+            <connections>
+                <outlet property="appDescriptionLabel" destination="hlg-TN-rYr" id="f5c-im-qC5"/>
+                <outlet property="appLogo" destination="kia-7O-kKM" id="cDd-u4-mSI"/>
+                <outlet property="categoriesCollection" destination="2Wt-Wp-LMA" id="lIc-Kt-Jfd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="41y-P7-eQ4">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1054"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1054" id="rc1-Dg-Rkb"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-TN-rYr">
+                    <rect key="frame" x="33" y="71" width="219" height="169"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="169" id="XvR-H6-IR6"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="ChalkboardSE-Light"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="kia-7O-kKM">
+                    <rect key="frame" x="227" y="71" width="176" height="189"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-Wp-LMA">
+                    <rect key="frame" x="26" y="268" width="362" height="575"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tsn-tT-MV2">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kia-7O-kKM" secondAttribute="trailing" constant="11" id="1va-M2-LJd"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9fM-5T-hNr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hlg-TN-rYr" secondAttribute="trailing" constant="162" id="GkU-bf-HUL"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="top" secondItem="kia-7O-kKM" secondAttribute="bottom" constant="8" id="Iiq-Tl-ygi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2Wt-Wp-LMA" secondAttribute="bottom" constant="19" id="Jlf-zw-4nf"/>
+                <constraint firstItem="41y-P7-eQ4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KV9-hn-Jms"/>
+                <constraint firstItem="hlg-TN-rYr" firstAttribute="top" secondItem="kia-7O-kKM" secondAttribute="top" id="iHh-Lw-SSr"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="kbw-ae-xea"/>
+                <constraint firstItem="41y-P7-eQ4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kkY-fO-aIQ"/>
+                <constraint firstItem="kia-7O-kKM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="227" id="oX7-2w-nxg"/>
+                <constraint firstItem="hlg-TN-rYr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="27" id="sWV-sk-a5K"/>
+                <constraint firstItem="41y-P7-eQ4" firstAttribute="centerX" secondItem="2Wt-Wp-LMA" secondAttribute="centerX" id="t0o-xT-V6a"/>
+                <constraint firstItem="hlg-TN-rYr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="ucb-gV-7E5"/>
+                <constraint firstItem="2Wt-Wp-LMA" firstAttribute="top" secondItem="hlg-TN-rYr" secondAttribute="bottom" constant="28" id="w5E-jT-rbH"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="360" height="640"/>
+        <image name="launch" width="686" height="688"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
